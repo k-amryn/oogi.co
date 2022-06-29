@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=0.9">
   <title>Baby Apes Testing</title>
 </head>
 
@@ -15,7 +15,7 @@
 
   body {
     font-family: DigitalDisco;
-    padding: 0px;
+    padding: 5px;
     margin: 0px;
     background: #f5f5f1;
     font-size: 16pt;
@@ -67,15 +67,39 @@
     place-content: center;
   }
 
+  .hidden {
+    display: none;
+  }
+
+  @media only screen and (max-width:600px) {
+    #logo {
+      width: 150px;
+    }
+
+    body {
+      font-size: 14pt;
+    }
+
+    .button img {
+      width: 180px;
+    }
+
+    .button span {
+      position: absolute;
+      left: 26px;
+      top: 14px;
+    }
+  }
+
 </style>
 
 <body>
   <div id="wrapper">
 
     <div id="navbar">
-      <img src="assets/logo.png">
+      <img id="logo" src="assets/logo.png">
       <span>Staking</span>
-      <div class="button" onclick="alert('Button not functional. Yet...')">
+      <div class="button" onclick="phantomConnect()">
         <img src="assets/button_gold.png">
         <span>Connect Wallet</span>
       </div>
@@ -83,10 +107,33 @@
 
     <div id="content-wrapper">
       <div id="content">
-        Nothing here. Yet...
+        <span class="waiting">Waiting for connection.</span>
+
+        <div id="connected" class="hidden">
+          <span>Connected. Your address is:<br></span>
+          <span id="address"></span>
+        </div>
+        
       </div>
     </div>
 
   </div>
+
+  <script>
+    async function phantomConnect() {
+      try {
+        const resp = await window.solana.connect()
+        console.log(resp.publicKey.toString())
+        document.querySelector('#address').innerHTML = resp.publicKey.toString()
+        document.querySelector('.hidden').classList.remove('hidden')
+        document.querySelector('.waiting').classList.add('hidden')
+      } catch (err) {
+        console.log(err.message)
+      }
+
+
+    }
+  </script>
+
 </body>
 </html>
