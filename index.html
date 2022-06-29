@@ -1,12 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baby Apes Testing</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baby Apes Testing</title>
 </head>
+
+<style>
+  @font-face {
+    font-family: DigitalDisco;
+    src: url(assets/DigitalDisco.ttf);
+  }
+
+  body {
+    font-family: DigitalDisco;
+    padding: 0px;
+    margin: 0px;
+    background: #f5f5f1;
+    font-size: 16pt;
+  }
+
+  #wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1000px;
+  }
+
+  .button {
+    position: relative;
+    cursor: pointer;
+  }
+
+  .button span {
+    position: absolute;
+    left: 39px;
+    top: 18px;
+  }
+
+  #content-wrapper {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #content {
+    background: lightgrey;
+    border-radius: 20px;
+    height: 400px;
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    place-content: center;
+  }
+
+</style>
+
 <body>
-    
+  <div id="wrapper">
+
+    <div id="navbar">
+      <img src="assets/logo.png">
+      <span>Staking</span>
+      <div class="button" onclick="alert('Button not functional. Yet...')">
+        <img src="assets/button_gold.png">
+        <span>Connect Wallet</span>
+      </div>
+    </div>
+
+    <div id="content-wrapper">
+      <div id="content">
+        Nothing here. Yet...
+      </div>
+    </div>
+
+  </div>
 </body>
-</html>l
+</html>
