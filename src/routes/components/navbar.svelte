@@ -7,7 +7,7 @@ import Oogibox from "./oogibox.svelte";
   <div id="header-inner">
     <Oogibox px="10px">
       <div class="content">
-        <img src="./logo.png" alt="">
+        <img src="../logo.png" alt="">
       </div>
     </Oogibox>
   </div>
