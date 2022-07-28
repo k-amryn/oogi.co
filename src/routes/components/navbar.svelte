@@ -3,13 +3,33 @@ import Oogibox from "./oogibox.svelte";
 
 </script>
 
-<Oogibox px="10px">
-  <div class="content">
-    <img src="./oogi.png" alt="">
+<div id="header">
+  <div id="header-inner">
+    <Oogibox px="10px">
+      <div class="content">
+        <img src="./logo.png" alt="">
+      </div>
+    </Oogibox>
   </div>
-</Oogibox>
+</div>
 
 <style>
+  * {
+    box-sizing: border-box;
+  }
+  #header {
+    position:fixed;
+    width: 100%;
+    display: flex;
+    height: 150px;
+    padding: 50px 20px 0px 20px;
+    display: flex;
+    justify-content: center;
+  }
+  #header-inner {
+    width: 100%;
+    max-width: 1200px;
+  }
   .content {
     width: 100%;
     display: flex;
