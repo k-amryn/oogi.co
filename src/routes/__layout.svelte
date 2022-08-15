@@ -8,8 +8,17 @@
 <main>
   <Navbar />
   <slot />
+  <div class="spacer"></div>
   <Footer />
 </main>
 
 <style>
+  main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .spacer {
+    flex: 1 0 auto;
+  }
 </style>

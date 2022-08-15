@@ -1,6 +1,6 @@
 <div class="container">
   <div class="logo">
-    <img style="width: 150px;" src="../logo_outline.png" alt="">
+    <img style="width: 150px;" src="/logo_outline.png" alt="">
   </div>
   <div class="col 1">
     <span>About</span>
@@ -13,8 +13,8 @@
     <span>NFT</span>
   </div>
   <div class="social">
-    <img src="../social-discord.png" alt="discord link">
-    <img src="../social-twitter.png" alt="twitter link">
+    <img src="/social-discord.png" alt="discord link">
+    <img src="/social-twitter.png" alt="twitter link">
   </div>
 
 </div>

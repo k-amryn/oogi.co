@@ -24,7 +24,10 @@
 
 <main>
   <div class="header">
-    <h1 style="margin-top: 100px">Ascended from the Jungle</h1>
+    <h1 style="margin-top: 100px; text-align: center">
+      ascended from the jungle<br>
+      hanging out on solana
+    </h1>
     <img style="width: 200px" class="header-logo" src="oogi.png" alt="OOGI">
   </div>
 
@@ -92,7 +95,7 @@
     margin-top: 25%;
     padding: 0px 23% 0px 23%;
     max-width: 900px;
-    z-index: -1;
+    z-index: 1;
   }
   .scroll-logo {
     position: absolute;
