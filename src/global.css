@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'DigitalDisco';
-  src: url(./DigitalDisco.ttf);
+  src: url(/DigitalDisco.ttf);
 }
 body {
   height: 100%;
